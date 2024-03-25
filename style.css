@@ -123,3 +123,32 @@ body.active {
 ::-webkit-scrollbar-thumb:hover {
     background-color: hsl(0, 0%, 70%);
 }
+
+/* HEADER */
+
+.overlay,
+.navbar,
+.header-action-btn:not(.nav-open-btn) {
+    display: none;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    border-block-end: 1px solid var(--white_10);
+}
+.header.active {
+    position: fixed;
+    background-color: var(--phthalo-green-2);
+    border: none;
+    box-shadow: var(--shadow);
+    transform: translateY(-100%);
+    animation: slideInTop 0.5s ease forwards;
+}
+@keyframes slideInTop {
+    0% { transform: translateY(-100%);}
+    100% { transform: translateY(0);}
+}
